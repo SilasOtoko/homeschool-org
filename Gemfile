@@ -28,9 +28,11 @@ group :development, :test do
   gem 'spring'
   gem 'sqlite3'
   gem "awesome_print", require:"ap"
-  gem 'rspec', '~> 3.3.0'
+  gem 'rspec-rails', '~> 3.3.3'
   gem 'faker', '1.5.0'
   gem 'fabrication'
+  gem 'database_cleaner', '1.2.0'
+  gem 'shoulda-matchers'
 end
 
 group :production do
