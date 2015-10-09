@@ -1,10 +1,11 @@
-require 'spec_helper'
+require 'rails_helper'
 require 'database_cleaner'
 
-DatabaseCleaner.strategy = :truncation
+# DatabaseCleaner.strategy = :truncation
 
-# then, whenever you need to clean the DB
-DatabaseCleaner.clean
+# # then, whenever you need to clean the DB
+# DatabaseCleaner.clean
 
-describe PagesController do
+RSpec.describe PagesController, :type => :controller do
+
 end
