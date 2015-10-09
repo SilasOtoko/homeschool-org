@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#login'
+  root 'pages#welcome'
   
   get '/log_in', to: 'sessions#new'
   get '/register', to: 'users#new'
@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post '/log_in', to: 'sessions#create'
   get '/dashboard', to: 'pages#dashboard'
 
-  resources :homeschools, only: [:show]
+  resources :homeschools, only: [:show, :edit, :update]
   resources :users, only: [:edit, :create, :show]
+  resources :students
 end

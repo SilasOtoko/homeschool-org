@@ -1,9 +1,10 @@
 class PagesController < ApplicationController
-  def login
+  def welcome
     
   end
   
   def dashboard
-    @user = User.find_by(session[:user_id])
+    @user = current_user
+    @homeschool = @user.homeschool
   end
 end

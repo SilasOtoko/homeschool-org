@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151008191446) do
+ActiveRecord::Schema.define(version: 20151009194531) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "name"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20151008191446) do
     t.integer  "homeschool_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "age"
+    t.string   "grade"
   end
 
   create_table "users", force: :cascade do |t|

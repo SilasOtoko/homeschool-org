@@ -1,0 +1,21 @@
+<div class="row text-center">
+  <%= link_to new_student_path do %>
+    <p class="btn btn-default">
+      <i class="fa fa-plus-square"> Add</i>
+    </p>
+  <% end %>
+</div>
+<br/>
+<div class="row text-center">
+  <% @students.each do |student| %>
+    <%= link_to student_path(student) do %>
+      <div class="col-md-3">
+        <div class="well">
+          <h2><%= student.name %></h2>
+          <p><%= student.age %></p>
+          <p><%= student.grade %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

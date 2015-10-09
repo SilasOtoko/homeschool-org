@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
+    User.set_homeschool_id(@user) if @user.new_record?
     
     if @user.save
       session[:user_id] = @user.id

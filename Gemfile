@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
-gem 'font-awesome-sass', '~> 4.3.0'
+gem 'font-awesome-sass'
 gem 'rails-file-icons'
 
 group :doc do

@@ -1,0 +1,18 @@
+<div class="form-container">
+  <%= form_for @student do |f| %>
+    <div class="control-group">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="control-group">
+      <%= f.label :age %>
+      <%= f.text_field :age %>
+    </div>
+    <div class="control-group">
+      <%= f.label :grade %>
+      <%= f.text_field :grade %>
+    </div>
+    <!--TODO: Add upload picture function-->
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+  <% end %>
+</div>

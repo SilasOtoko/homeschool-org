@@ -200,7 +200,7 @@ DEPENDENCIES
   database_cleaner (= 1.2.0)
   fabrication
   faker (= 1.5.0)
-  font-awesome-sass (~> 4.3.0)
+  font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
   pg

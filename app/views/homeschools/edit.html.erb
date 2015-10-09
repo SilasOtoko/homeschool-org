@@ -1,0 +1,10 @@
+<div class='form-container'>
+  <%= form_for @homeschool do |f| %>
+    <%= render 'shared/errors', obj: @homeschool %>
+    <div class='control-group'>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <%= f.submit 'Update', class: 'btn btn-success' %>
+  <% end %>
+</div>
