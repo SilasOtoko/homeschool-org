@@ -45,7 +45,7 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (2.3.2.2)
+    bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     bootstrap_form (2.3.0)
     builder (3.2.2)
@@ -118,6 +118,7 @@ GEM
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
+    rails-file-icons (0.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
     rails_12factor (0.0.3)
@@ -193,7 +194,7 @@ DEPENDENCIES
   awesome_print
   bcrypt (~> 3.1.7)
   better_errors
-  bootstrap-sass (~> 2.3.2.0)
+  bootstrap-sass (~> 3.2.0)
   bootstrap_form
   coffee-rails (~> 4.1.0)
   database_cleaner (= 1.2.0)
@@ -207,6 +208,7 @@ DEPENDENCIES
   pry-nav
   quiet_assets
   rails (= 4.2.1)
+  rails-file-icons
   rails_12factor
   rspec-rails (~> 3.3.3)
   sass-rails (~> 5.0)

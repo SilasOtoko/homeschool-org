@@ -11,7 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003190825) do
+ActiveRecord::Schema.define(version: 20151008191446) do
+
+  create_table "assignments", force: :cascade do |t|
+    t.string   "name"
+    t.string   "file"
+    t.integer  "grade"
+    t.text     "comments"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "communities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "homeschools", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "community_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "name"
+    t.string   "assignment"
+    t.integer  "gpa"
+    t.string   "picture"
+    t.integer  "homeschool_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -19,6 +52,7 @@ ActiveRecord::Schema.define(version: 20151003190825) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "homeschool_id"
   end
 
 end

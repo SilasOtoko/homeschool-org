@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   post '/log_in', to: 'sessions#create'
   get '/dashboard', to: 'pages#dashboard'
 
+  resources :homeschools, only: [:show]
+  resources :users, only: [:edit, :create, :show]
 end

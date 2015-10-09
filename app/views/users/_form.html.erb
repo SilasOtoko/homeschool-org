@@ -1,0 +1,18 @@
+<div class='form-container'>
+  <%= form_for @user do |f| %>
+    <%= render 'shared/errors', obj: @user %>
+    <div class='control-group'>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </div>
+    <div class='control-group'>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <div class='control-group'>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+    <%= f.submit @user.new_record? ? "Register" : "Update Profile", class: 'btn btn-success' %>
+  <% end %>
+</div>
