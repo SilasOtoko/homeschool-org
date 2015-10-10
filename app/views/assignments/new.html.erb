@@ -1,0 +1,14 @@
+<h1>Add Assignment</h1>
+<%= form_for @assignment, :html => {:multipart => true} do |f| %>
+  <div class="control-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :grade %>
+    <%= f.text_field :grade %>
+    <%= f.label :comments %>
+    <%= f.text_field :comments %>
+    <%= f.label :document %>
+    <%= f.file_field :document %>
+  </div>
+  <%= f.submit 'Save', class: 'btn btn-primary' %>
+<% end %>

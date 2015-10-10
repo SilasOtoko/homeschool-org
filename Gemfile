@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-sass'
 gem 'rails-file-icons'
+gem "paperclip", "~> 4.3"
+gem 'rails-file-icons'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false

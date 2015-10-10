@@ -1,0 +1,8 @@
+<%= link_to 'Add Assignment', new_assignment_path %>
+<% @assignments.each do |assignment| %>
+  <%= link_to assignment_path(assignment) do %>
+    <div class="well">
+      <i class=<%= Assignment.extension_image(assignment.document) %>></i> <h1><%= assignment.name %></h1>
+    </div>
+  <% end %>
+<% end %>

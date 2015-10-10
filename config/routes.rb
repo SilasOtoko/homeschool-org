@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :homeschools, only: [:show, :edit, :update]
   resources :users, only: [:edit, :create, :show]
   resources :students
+  resources :assignments
 end
