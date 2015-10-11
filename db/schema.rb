@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151009194531) do
+ActiveRecord::Schema.define(version: 20151011151701) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "name"
-    t.string   "file"
     t.integer  "grade"
     t.text     "comments"
     t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
+    t.string   "assignment"
   end
 
   create_table "communities", force: :cascade do |t|
@@ -40,12 +44,20 @@ ActiveRecord::Schema.define(version: 20151009194531) do
     t.string   "name"
     t.string   "assignment"
     t.integer  "gpa"
-    t.string   "picture"
     t.integer  "homeschool_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "age"
     t.string   "grade"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
+    t.string   "avatar"
   end
 
   create_table "users", force: :cascade do |t|

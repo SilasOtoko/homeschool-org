@@ -11,6 +11,7 @@
     <%= link_to student_path(student) do %>
       <div class="col-md-3">
         <div class="well">
+          <%= image_tag student.avatar_url(:thumb) if student.avatar? %>
           <h2><%= student.name %></h2>
           <p><%= student.age %></p>
           <p><%= student.grade %></p>

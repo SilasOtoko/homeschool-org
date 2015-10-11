@@ -1,0 +1,9 @@
+<%= link_to 'Add Assignment', new_student_assignment_path %>
+<% @assignments.all.each do |assignment| %>
+  <%= link_to student_assignment_path(@student, assignment), class: "thumbnail col-md-3" do %>
+    <% if assignment.assignment %>
+      <%= image_tag(assignment.assignment_url) %>
+    <% end %>
+    <h1 class="caption"><%= assignment.name %></h1>
+  <% end %>
+<% end %>
