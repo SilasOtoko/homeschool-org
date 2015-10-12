@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   before_action :require_user
-  before_action :require_same_user, except: [:index]
+  before_action :require_same_user, except: [:index, :new, :create]
   
   def index
     @homeschool = current_user.homeschool
