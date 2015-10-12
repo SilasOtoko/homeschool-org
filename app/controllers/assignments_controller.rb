@@ -1,4 +1,7 @@
 class AssignmentsController < ApplicationController
+  before_action :require_user
+  before_action :require_same_user
+  
   def index
     @student = Student.find(params[:student_id])
     @assignments = Assignment.all.where(student_id: get_student.id)
@@ -58,5 +61,10 @@ class AssignmentsController < ApplicationController
   
   def get_student
     @student = Student.find(params[:student_id])
+  end
+  
+  def require_same_user
+    student = Student.find(params[:student_id])
+    access_denied unless logged_in? and (current_user.homeschool == student.homeschool)
   end
 end

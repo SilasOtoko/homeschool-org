@@ -14,6 +14,7 @@ gem 'font-awesome-sass'
 gem 'rails-file-icons'
 gem 'carrierwave'
 gem "mini_magick"
+gem 'minitest', '~> 5.8.1'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false
@@ -33,9 +34,12 @@ group :development, :test do
   gem "awesome_print", require:"ap"
   gem 'rspec-rails', '~> 3.3.3'
   gem 'faker', '1.5.0'
-  gem 'fabrication'
+end
+
+group :test do
+  gem 'shoulda-matchers', '2.5.0'
   gem 'database_cleaner', '1.2.0'
-  gem 'shoulda-matchers'
+  gem 'fabrication'
 end
 
 group :production do

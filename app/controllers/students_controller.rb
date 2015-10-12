@@ -1,4 +1,7 @@
 class StudentsController < ApplicationController
+  before_action :require_user
+  before_action :require_same_user, except: [:index]
+  
   def index
     @homeschool = current_user.homeschool
     @students = Student.all.where(homeschool_id: @homeschool.id)
@@ -43,5 +46,11 @@ class StudentsController < ApplicationController
   
   def student_params
     params.require(:student).permit!
+  end
+  
+  def require_same_user
+    homeschool = current_user.homeschool
+    student = Student.find(params[:id])
+    access_denied unless logged_in? and (current_user.homeschool == student.homeschool)
   end
 end

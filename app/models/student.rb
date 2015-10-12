@@ -3,4 +3,6 @@ class Student < ActiveRecord::Base
   has_many :assignments
   
   mount_uploader :avatar, AvatarUploader
+  
+  validates_presence_of :name
 end
