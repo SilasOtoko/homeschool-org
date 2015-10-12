@@ -40,6 +40,8 @@ group :test do
   gem 'shoulda-matchers', '2.5.0'
   gem 'database_cleaner', '1.2.0'
   gem 'fabrication'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :production do
