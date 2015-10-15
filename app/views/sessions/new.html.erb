@@ -1,15 +1,17 @@
-<h1 class='form-header'>Please log in</h1>
-<br/>
-<div class='form-container'>
-  <%= form_tag '/log_in' do %>
-    <div class='control-group'>
-      <%= label_tag :email %>
-      <%= email_field_tag :email, params[:user_name] || '' %>
-    </div>
-    <div class='control-group'>
-      <%= label_tag :password %>
-      <%= password_field_tag :password, params[:password] || '' %>
-    </div>
-    <%= submit_tag "Login", class: 'btn btn-success' %>
-  <% end %>
+<div class="row text-center">
+  <h1 class='form-header'>Please log in</h1>
+  <br/>
+  <div class='form-container text-center'>
+    <%= form_tag '/log_in' do %>
+      <div class='control-group'>
+        <%= label_tag :email %>
+        <%= email_field_tag :email, params[:user_name] || '' %>
+      </div>
+      <div class='control-group'>
+        <%= label_tag :password %>
+        <%= password_field_tag :password, params[:password] || '' %>
+      </div>
+      <%= submit_tag "Login", class: 'btn btn-success' %>
+    <% end %>
+  </div>
 </div>

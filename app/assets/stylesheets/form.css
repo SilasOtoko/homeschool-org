@@ -1,0 +1,15 @@
+.form-header{
+  text-align: center;
+}
+
+.form-container{
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.form-center{
+  text-align: center;
+}
