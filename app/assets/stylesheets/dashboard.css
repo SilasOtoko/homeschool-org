@@ -1,0 +1,21 @@
+#homeschool-name{
+  margin: 40px 0;
+}
+
+#homeschool-title{
+  font-size: 8em;
+  padding: 80px;
+}
+
+#homeschool-links a{
+  color: #3b3a36;
+}
+
+#homeschool-links .custom-well:hover{
+  border: 4px solid #3b3a36;
+}
+
+.dashboard-card{
+  text-align: center;
+  padding: 40px 0;
+}

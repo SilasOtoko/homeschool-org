@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/log_out', to: 'sessions#destroy'
   post '/log_in', to: 'sessions#create'
   get '/dashboard', to: 'pages#dashboard'
+  get '/calendar', to: 'pages#calendar'
 
   resources :homeschools, only: [:show, :edit, :update]
   resources :users, only: [:edit, :create, :show]

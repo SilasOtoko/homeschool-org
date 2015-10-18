@@ -1,3 +1,19 @@
 #navigation{
-  border-radius: 0; 
+  border-radius: 0;
+  background-color: #3b3a36;
+  color: white;
+}
+
+#navigation .navbar-nav > li > a{
+  color: #e9ece5;
+  font-weight: bold;
+}
+
+#navigation .navbar-nav > li > a:hover{
+  background-color: #c0dfd9;
+  color: #3b3a36;
+}
+
+.navbar{
+  margin-bottom: 0;
 }

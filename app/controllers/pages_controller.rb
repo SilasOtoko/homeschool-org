@@ -11,6 +11,10 @@ class PagesController < ApplicationController
     @homeschool = @user.homeschool
   end
   
+  def calendar
+    @homeschool = current_user.homeschool
+  end
+  
   private
   
   def to_dashboard

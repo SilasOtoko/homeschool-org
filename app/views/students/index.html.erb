@@ -6,15 +6,15 @@
   <% end %>
 </div>
 <br/>
-<div class="row text-center">
+<div class="row text-center" id="student-link">
   <% @students.each do |student| %>
     <%= link_to student_path(student) do %>
       <div class="col-md-3">
-        <div class="well">
+        <div class="custom-well" id="student-card">
           <%= image_tag student.avatar_url(:thumb) if student.avatar? %>
           <h2><%= student.name %></h2>
-          <p><%= student.age %></p>
-          <p><%= student.grade %></p>
+          <p>Age: <%= student.age %></p>
+          <p>Grade: <%= student.grade %></p>
         </div>
       </div>
     <% end %>

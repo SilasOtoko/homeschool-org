@@ -1,34 +1,51 @@
 <div class="row">
-  <div class="col-md-10 col-md-offset-1 well">
-    <h1><%= @homeschool.name %></h1>
-    <%= link_to 'Edit', edit_homeschool_path(@homeschool), class: "btn btn-default" %>
+  <div class="col-md-12">
+    <div class="custom-well text-center" id="homeschool-name">
+      <%= link_to 'Edit', edit_homeschool_path(@homeschool), class: "btn-dark-gray pull-right" %>
+      <h1 id="homeschool-title"><%= @homeschool.name %></h1>
+    </div>
   </div>
 </div>
-<div class="row">
-  <%= link_to students_path do %>
-    <div class="col-md-2 well dashboard-card">
-      <i class="fa fa-users fa-5x"></i>
-      <h2>Students</h2>
-    </div>
-  <% end %>
-  <!--TODO: Change this one to documents-->
-  <%= link_to students_path do %>
-    <div class="col-md-2 col-md-offset-1 well dashboard-card">
-      <i class="fa fa-folder-open fa-5x"></i>
-      <h2>Documents</h2>
-    </div>
-  <% end %>
-  <%= link_to students_path do %>
-    <div class="col-md-2 col-md-offset-1 well dashboard-card">
-      <i class="fa fa-calendar fa-5x"></i>
-      <h2>My Calendar</h2>
-    </div>
-  <% end %>
-  <%= link_to students_path do %>
-    <div class="col-md-2 col-md-offset-1 well dashboard-card">
-      <i class="fa fa-comments fa-5x"></i>
-      <h2>My Community</h2>
-    </div>
-  <% end %>
+<div class="row" id="homeschool-links">
+  <div class="col-md-3">
+    <%= link_to students_path do %>
+      <div class="custom-well">
+        <div class="dashboard-card">
+          <i class="fa fa-users fa-5x"></i>
+          <h2>Students</h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-3">
+    <%= link_to students_path do %>
+      <div class="custom-well">
+        <div class="dashboard-card">
+          <i class="fa fa-folder-open fa-5x"></i>
+          <h2>Documents</h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-3">
+    <%= link_to calendar_path do %>
+      <div class="custom-well">
+        <div class="dashboard-card">
+          <i class="fa fa-calendar fa-5x"></i>
+          <h2>Calendar</h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-3">
+    <%= link_to students_path do %>
+      <div class="custom-well">
+        <div class="dashboard-card">
+          <i class="fa fa-comments fa-5x"></i>
+          <h2>Community</h2></h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 

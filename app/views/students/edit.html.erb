@@ -1,21 +1,14 @@
-<div class="form-container">
-  <%= form_for @student, html: { multipart: true } do |f| %>
-    <div class="control-group">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+<div class="row">
+  <div class="col-xs-6 col-md-4 col-md-offset-4 custom-well">
+    <div class="form-container">
+      <%= bootstrap_form_for @student, html: { multipart: true } do |f| %>
+          <%= f.text_field :name %>
+          <%= f.text_field :age %>
+          <%= f.text_field :grade %>
+          <%= f.text_area :description, label: "Short Bio" %>
+          <%= f.file_field :avatar, label: "Upload Picure", rows: 5 %>
+        <%= f.submit 'Save', class: 'btn btn-primary' %>
+      <% end %>
     </div>
-    <div class="control-group">
-      <%= f.label :age %>
-      <%= f.text_field :age %>
-    </div>
-    <div class="control-group">
-      <%= f.label :grade %>
-      <%= f.text_field :grade %>
-    </div>
-    <div class="control-group">
-      <%= f.label :avatar, "Change Photo" %>
-      <%= f.file_field :avatar %>
-    </div>
-    <%= f.submit 'Save', class: 'btn btn-primary' %>
-  <% end %>
+  </div>
 </div>

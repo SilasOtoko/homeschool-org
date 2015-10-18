@@ -15,6 +15,8 @@ gem 'rails-file-icons'
 gem 'carrierwave'
 gem "mini_magick"
 gem 'minitest', '~> 5.8.1'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false

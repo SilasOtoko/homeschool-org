@@ -1,4 +1,75 @@
-<h1><%= @student.name %></h1>
-<%= link_to 'Edit', edit_student_path(@student) %>
-<%= image_tag @student.avatar_url(:thumb) if @student.avatar? %>
-<%= link_to 'Assignments', student_assignments_path(@student) %>
+<div class="row" id="student-info">
+  <div class="col-md-6">
+    <div class="custom-well text-center" id="profile">
+      <%= link_to 'Edit', edit_student_path(@student), class: "btn-dark-gray pull-right" %>
+      <%= image_tag @student.avatar_url(:thumb) if @student.avatar? %>
+    </div>
+  </div>
+  <div class="col-md-5 col-md-offset-1 custom-well text-center">
+    <h1><%= @student.name %></h1>
+  </div>
+  <br/>
+  <div class="col-md-5 col-md-offset-1 custom-well" id="student-description">
+    <% if @student.description.present? %>
+      <%= @student.description %>
+    <% else %>  
+      <p class="small text-center">Your student's short description/biography will show up here</p>
+    <% end %>
+  </div>
+</div>
+<br/>
+<br/>
+<div class="row">
+  <div class="col-md-2 student-links">
+    <%= link_to student_assignments_path(@student) do %>
+      <div class="custom-well text-center">
+        <i class="fa fa-list fa-3x"></i>
+        <h4>Assignments</h4>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-2 student-links">
+    <%= link_to student_assignments_path(@student) do %>
+      <div class="custom-well text-center">
+        <i class="fa fa-calculator fa-3x"></i>
+        <h4>Test Scores</h4>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-2 student-links">
+    <%= link_to student_assignments_path(@student) do %>
+      <div class="custom-well text-center">
+        <i class="fa fa-briefcase fa-3x"></i>
+        <h4>Legal Documents</h4>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-2 student-links">
+    <%= link_to student_assignments_path(@student) do %>
+      <div class="custom-well text-center">
+        <i class="fa fa-file fa-3x"></i>
+        <h4>Completed Work</h4></h4>
+      </div>
+    <% end %>
+  </div>
+   <div class="col-md-2 student-links">
+    <%= link_to student_assignments_path(@student) do %>
+      <div class="custom-well text-center">
+        <i class="fa fa-columns fa-3x"></i>
+        <h4>Lesson Plan</h4>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-2 student-links">
+    <%= link_to student_assignments_path(@student) do %>
+      <div class="custom-well text-center">
+        <i class="fa fa-calendar-check-o fa-3x"></i>
+        <h4>Attendance</h4></h4>
+      </div>
+    <% end %>
+  </div>
+</div>
+
