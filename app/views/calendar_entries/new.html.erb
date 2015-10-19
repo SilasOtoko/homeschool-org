@@ -1,0 +1,9 @@
+<div class="form-container">
+  <%= bootstrap_form_for @calendar_entry, html: { multipart: true } do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_field :start_date %>
+    <%= f.text_field :end_date %>
+    <%= f.check_box :all_day, {}, "true", "false" %>
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+  <% end %>
+</div>

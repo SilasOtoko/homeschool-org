@@ -1,0 +1,8 @@
+#current-day{
+  margin-bottom: 15px;
+}
+
+#current-day-agenda{
+  min-height: 200px;
+  max-height: 500px;
+}

@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :students do
     resources :assignments
   end
+  resources :calendar_entries, only: [:create, :new]
 end

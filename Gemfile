@@ -17,6 +17,7 @@ gem "mini_magick"
 gem 'minitest', '~> 5.8.1'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false

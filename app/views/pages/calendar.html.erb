@@ -1,8 +1,22 @@
-<div class="custom-well">
-  <h1><%= @homeschool.name %> Calendar</h1>
-  <div id='calendar'></div>
+<div class="row">
+  <div class="col-md-8">
+    <div class="custom-well">
+      <h1><%= @homeschool.name %> Calendar</h1>
+      <div id='calendar'></div>
+    </div>
+  </div>
+  <div class="col-md-4 custom-well" id="current-day">
+  	<h1 class="text-center">Current day</h1>
+  </div>
+  <div class="col-md-4 custom-well" id="current-day-agenda">
+  	<h3 class="text-center">Today's Events</h3>
+  	<br/>
+  	<ul>
+  		<li>Event 1</li>
+  		<li>Event 2</li>
+  	</ul>
+  </div>
 </div>
-
 
 <script>
   $(document).ready(function() {
